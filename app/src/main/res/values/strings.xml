@@ -7,4 +7,5 @@
     <string name="submit_button">Submit</string>
     <string name="email_input_hint">Email...</string>
     <string name="password_input_hint">Password</string>
+    <string name="login_form_template">Email: %s, Password: %s </string>
 </resources>
