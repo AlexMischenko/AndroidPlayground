@@ -2,7 +2,6 @@ package com.example.justandroidapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.justandroidapp.databinding.ActivityGetToKnowYouBinding
 import com.google.android.material.snackbar.Snackbar
