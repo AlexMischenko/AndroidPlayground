@@ -28,13 +28,24 @@ class MainActivity : AppCompatActivity() {
             my_layout.addView(newTextView)
         }
 
-        val newButton = Button(this)
-        newButton.text = getString(R.string.generated_btn_label)
-        newButton.setOnClickListener { view ->
+        // Generate "Go to Login" button
+        val loginButton = Button(this)
+        loginButton.text = getString(R.string.go_to_login)
+        loginButton.setOnClickListener { view ->
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-        binding.myLayout.addView(newButton)
+        binding.myLayout.addView(loginButton)
+
+        // Generate "Go to GetToKnowYou from" button
+        val goToFormButton = Button(this)
+        goToFormButton.text = getString(R.string.get_to_know_you_form)
+        goToFormButton.setOnClickListener { view ->
+            val intent = Intent(this, GetToKnowYouActivity::class.java)
+            startActivity(intent)
+        }
+        binding.myLayout.addView(goToFormButton)
+
 //        Also valid ways to add a View
 //        my_layout.addView(newButton)
 //        findViewById<LinearLayout>(R.id.my_layout).addView(newButton)
