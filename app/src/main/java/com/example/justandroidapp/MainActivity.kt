@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         addSomeViews(5)
     }
 
-    fun addSomeViews (count: Int) {
+    private fun addSomeViews (count: Int) {
         for (i in 1..count) {
             val newTextView = TextView(this)
             newTextView.text = "New text # $i"
@@ -29,13 +29,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Generate "Go to Login" button
-        val loginButton = Button(this)
-        loginButton.text = getString(R.string.go_to_login)
-        loginButton.setOnClickListener { view ->
+        val goLoginButton = Button(this)
+        goLoginButton.text = getString(R.string.go_to_login)
+        goLoginButton.setOnClickListener { view ->
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-        binding.myLayout.addView(loginButton)
+        binding.myLayout.addView(goLoginButton)
 
         // Generate "Go to GetToKnowYou from" button
         val goToFormButton = Button(this)
@@ -45,6 +45,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.myLayout.addView(goToFormButton)
+
+        // Generate "Go to Image Test" button
+        val goImageTestButton = Button(this)
+        goImageTestButton.text = getString(R.string.go_to_image_test)
+        goImageTestButton.setOnClickListener { view ->
+            val intent = Intent(this, ImageTestActivity::class.java)
+            startActivity(intent)
+        }
+        binding.myLayout.addView(goImageTestButton)
+
 
 //        Also valid ways to add a View
 //        my_layout.addView(newButton)

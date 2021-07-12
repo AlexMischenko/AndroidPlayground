@@ -3,6 +3,7 @@
     <string name="in_the_middle">In the middle</string>
     <string name="go_to_login">Go to Login</string>
     <string name="get_to_know_you_form">Get to Know You Form</string>
+    <string name="go_to_image_test">Go to Image Test</string>
     <string name="click_me">Click me!</string>
     <string name="login_form_title">Login</string>
     <string name="submit_button">Submit</string>
@@ -15,4 +16,5 @@
     <string name="info_message_template">
         Hi, %s, your favorite color is %s, and your favorite snack is %s
     </string>
+    <string name="switch_label">Switch downloaded images</string>
 </resources>
