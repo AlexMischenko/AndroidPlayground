@@ -10,13 +10,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val testButtons by lazy {
+        arrayListOf<Button>(button4, button5, button6)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        lifecycle.addObserver(MainLifecycleObserver())
+
         addSomeViews(5)
+        for (testButton in testButtons) {
+            testButton.text = "renamed"
+        }
     }
 
     private fun addSomeViews (count: Int) {
